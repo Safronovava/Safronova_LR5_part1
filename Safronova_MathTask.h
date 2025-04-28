@@ -11,6 +11,9 @@ if (input.empty()) return false;
 try {
 //преобразование введенного значения в тип
 int number = stoi(input) ;
+if (input.length() != to_string(number).length() || number < 0) {
+    return false;
+}
 }
 catch (...) //если возникла ошибка в блоке try
 { return false; } return true;
@@ -29,7 +32,7 @@ void EnterDigit(int& varLink, const string& label) {
 }
 
 int CalcRectangleArea(int NumberA, int NumberB) {
-    return NumberA * NumberB ;
+    return NumberA * NumberB;
 
 }
 
